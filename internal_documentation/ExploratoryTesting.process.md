@@ -1,6 +1,6 @@
 # Exploratory Testing Process
 
-A systematic approach to exploratory testing that balances structure with the freedom to investigate and discover issues through hands-on exploration.
+A systematic approach to exploratory testing focused on finding bugs, breaking functionality, and uncovering issues that automated tests miss. The goal is to be adversarial - actively trying to make the system fail.
 
 ## Preparation Phase
 
@@ -12,34 +12,34 @@ A systematic approach to exploratory testing that balances structure with the fr
 - Determine testing time constraints and scope
 
 ### 2. Set Testing Charter
-- Define the mission: What are we trying to learn?
-- Identify focus areas (functionality, usability, performance, security)
+- Define the mission: What can we break? What might fail?
+- Identify high-risk areas and attack vectors
 - Set time boundaries for the testing session
-- Choose testing techniques and heuristics to apply
+- Choose aggressive testing techniques to expose weaknesses
 
 ## Execution Phase
 
 ### 3. Initial Reconnaissance
 - Open the application in browser
 - Take initial screenshots for documentation
-- Perform a quick tour to understand the application structure
-- Note first impressions and obvious issues
-- Identify main navigation paths and user flows
+- Perform a quick tour looking for obvious flaws and inconsistencies
+- Note immediate red flags and suspicious behavior
+- Map attack surfaces and potential failure points
 
-### 4. Systematic Exploration
-- **Happy Path Testing**: Test intended user workflows
-- **Boundary Testing**: Test edge cases and limits
-- **Error Handling**: Try invalid inputs and unexpected actions
-- **Cross-browser/Device Testing**: Test on different platforms
-- **Accessibility Testing**: Check keyboard navigation, screen readers
-- **Performance Observation**: Note slow loading, responsiveness issues
+### 4. Systematic Attack
+- **Break Happy Paths**: Interrupt and corrupt intended workflows
+- **Boundary Assault**: Push limits until something breaks
+- **Error Provocation**: Force errors with malformed inputs and edge cases
+- **Platform Exploitation**: Find browser/device-specific failures
+- **Accessibility Violations**: Expose barriers and compliance failures
+- **Performance Stress**: Identify bottlenecks and breaking points
 
-### 5. Deep Dive Investigation
-- Follow interesting observations and anomalies
-- Test integrations between different features
-- Explore less obvious user paths
-- Test with different user roles/permissions if applicable
-- Investigate security concerns (input validation, authentication)
+### 5. Exploit Discovery
+- Pursue every anomaly until you understand the failure
+- Attack integration points where systems connect
+- Find hidden paths and unintended access routes
+- Escalate privileges and bypass authorization
+- Expose security vulnerabilities and data leaks
 
 ## Documentation Phase
 
@@ -47,26 +47,30 @@ While working, record steps, todos and findings in a document called
 TestSession.01.md
 Figure out the number by incrementing the last number by 1
 
-## Testing Heuristics
+## Attack Heuristics
 
-### CRUD Operations
-- Create, Read, Update, Delete functionality
-- Data validation and error handling
-- Permissions and access control
+### CRUD Exploitation
+- Force creation of invalid/malicious data
+- Access data you shouldn't be able to read
+- Corrupt updates and cause data loss
+- Delete critical information
+- Bypass validation and permission checks
 
-### User Interface
-- Visual consistency and alignment
-- Responsive design across screen sizes
-- Form validation and user feedback
-- Navigation clarity and intuitiveness
+### UI Breaking Points
+- Find visual glitches and layout failures
+- Break responsive design with extreme screen sizes
+- Bypass form validation with crafted inputs
+- Confuse navigation and trap users in dead ends
 
-### Data Flow
-- Input/output validation
-- Data persistence across sessions
-- Integration points between systems
-- API responses and error handling
+### Data Corruption
+- Inject malicious payloads to bypass validation
+- Corrupt data persistence and session state
+- Exploit integration vulnerabilities
+- Trigger API failures and expose error details
 
 ## Session Management
 
-- Debrief after each session to capture learnings
-- Plan follow-up sessions based on findings
+- Document every bug, failure, and vulnerability found
+- Prioritize critical issues that could impact users
+- Plan follow-up attacks based on discovered weaknesses
+- Share findings to prevent similar issues in other areas
