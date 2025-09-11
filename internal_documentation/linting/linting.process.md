@@ -1,6 +1,6 @@
-Read the .temp/lint-results.txt file and fix a random issue, and fix that one issue.
+Read the `.temp/lint-results.txt` file and choose a random issue, and fix that one issue.
 
-Write a git commit message that describes the changes you made to .temp/commit-message.txt
+Write a git commit message that describes the changes you made to `.temp/commit-message.txt`.
 
 Here's an example of what the commit message should look like:
 
